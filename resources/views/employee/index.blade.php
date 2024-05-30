@@ -53,13 +53,14 @@
                             @endif
                         </div>
                         <div class="col-md-6 mt-3">
+
                             <input type="submit" class="btn btn-danger" value="Register">
+
+      
                         </div>
                     </div>
                 </form>
             </div>
-
-            
 
             <h3 align="center" class="mt-5">Employee List</h3>
                 <table class="table mt-5 border">

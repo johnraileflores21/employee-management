@@ -52,8 +52,8 @@
                                 <ul class="text-danger mt-2"><li>{{ $errors->first('phone') }}</li></ul>
                             @endif
                         </div>
-                        <div class="col-md-6 mt-3">
-                            <input type="submit" class="btn btn-info" value="Register">
+                        <div class="col-md-6 mt-3 t">
+                            <input type="submit" class="btn btn-info" value="Register">      
                         </div>
                     </div>
                 </form>

@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container bg bg-dark">
 
         <h3 align="center" class="">Employee Management</h3>
 
@@ -44,7 +44,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 mt-3">
-                        <button type="submit" class="btn btn-danger">Update</button>
+                        <button type="submit" class="btn btn-info">Update</button>
 
                      </div>
 

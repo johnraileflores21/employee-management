@@ -53,7 +53,7 @@
                             @endif
                         </div>
                         <div class="col-md-6 mt-3 t">
-                            <input type="submit" class="btn btn-info" value="Register">      
+                            <input type="submit" class="btn btn-danger" value="Register">      
                         </div>
                     </div>
                 </form>

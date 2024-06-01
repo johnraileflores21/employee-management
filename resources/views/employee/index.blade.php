@@ -24,7 +24,7 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-6 mt-3">
-                            <label>Employee First Name</label>
+                            <label>First Name</label>
                             <input type="text" class="form-control" name="firstname" value="{{ old('firstname') }}" placeholder="Enter Firstname">
                             @if ($errors->has('firstname'))
                                 <ul class="text-danger mt-2"><li>{{ $errors->first('firstname') }}</li></ul>
@@ -53,7 +53,7 @@
                             @endif
                         </div>
                         <div class="col-md-6 mt-3 t">
-                            <input type="submit" class="btn btn-danger" value="Register">      
+                            <input type="submit" class="btn btn-success" value="Register">      
                         </div>
                     </div>
                 </form>

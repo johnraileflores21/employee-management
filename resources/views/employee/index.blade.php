@@ -24,14 +24,14 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-6 mt-3">
-                            <label>First Name</label>
+                            <label>Employee First Name</label>
                             <input type="text" class="form-control" name="firstname" value="{{ old('firstname') }}" placeholder="Enter Firstname">
                             @if ($errors->has('firstname'))
                                 <ul class="text-danger mt-2"><li>{{ $errors->first('firstname') }}</li></ul>
                             @endif
                         </div>
                         <div class="col-md-6 mt-3">
-                            <label>Last Name</label>
+                            <label>Employee Last Name</label>
                             <input type="text" class="form-control" name="lastname" value="{{ old('lastname') }}" placeholder="Enter Lastname">
                             @if ($errors->has('firstname'))
                                 <ul class="text-danger mt-2"><li>{{ $errors->first('lastname') }}</li></ul>
@@ -46,7 +46,7 @@
 
                         </div>
                         <div class="col-md-6 mt-3">
-                            <label>Phone</label>
+                            <label>Phone Number</label>
                             <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" placeholder="Enter Phone Number">
                             @if ($errors->has('firstname'))
                                 <ul class="text-danger mt-2"><li>{{ $errors->first('phone') }}</li></ul>

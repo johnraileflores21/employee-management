@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container bg bg-dark">
+    <div class="container bg bg-primary">
 
         <h3 align="center" class="">Employee Management</h3>
 

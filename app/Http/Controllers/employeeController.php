@@ -59,5 +59,5 @@ class employeeController extends Controller
         $employee->delete();
         return redirect()->route('employee.index');
     }
-
+   
 }

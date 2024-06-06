@@ -14,8 +14,11 @@ class employeeController extends Controller
         $employers = Employee::all();
         return view('employee.index', compact('employers'));
     }
+    public function create(){
+        return view('employee.bsit3a');
+    }
     public function store(Request $request){
-        $request->validate([
+       /* $request->validate([
             'firstname'=> 'required|regex:/^[a-zA-Z\s]+$/u|max:255',
             'lastname'=> 'required|regex:/^[a-zA-Z\s]+$/u|max:255',
             'DOB' => 'required|date|before:today',
@@ -32,12 +35,14 @@ class employeeController extends Controller
             'phone.required' => 'Phone number is required',
             'phone.regex' => 'Phone number can only contain numbers and dashes',
             'phone.max' => 'Phone number cannot be longer than 11 characters',
-          ]);
+          ]); */
         $employeeData = [
-            'firstname' => $request->input('firstname'),
+            /*'firstname' => $request->input('firstname'),
             'lastname'=> $request->input('lastname'),
             'DOB'=> $request->input('DOB'),
-            'phone'=> $request->input('phone')
+            'phone'=> $request->input('phone'),*/
+            'name' => $request->input('name'),
+            'email' => $request->input('email')
         ];
         Employee::create($employeeData);
         return redirect('/employee');

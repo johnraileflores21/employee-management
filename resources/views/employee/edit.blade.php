@@ -18,27 +18,16 @@
                     <div class="row mt-5">
                         <div class="col-md-6">
                             <label>Employee Firstname</label>
-                            <input type="text" class="form-control" name="firstname" value="{{ $employee->firstname }}">
+                            <input type="text" class="form-control" name="name" value="{{ $employee->name }}">
                             @if ($errors->has('firstname'))
-                                <ul class="text-danger mt-2"><li>{{ $errors->first('firstname') }}</li></ul>
+                                <ul class="text-danger mt-2"><li>{{ $errors->first('name') }}</li></ul>
                             @endif                            
                         </div>
                         <div class="col-md-6">
                             <label>Employee Lastname</label>
-                            <input type="text" class="form-control" name="lastname" value="{{ $employee->lastname }}">
+                            <input type="text" class="form-control" name="email" value="{{ $employee->email }}">
                             @if ($errors->has('firstname'))
-                                <ul class="text-danger mt-2"><li>{{ $errors->first('lastname') }}</li></ul>
-                            @endif
-                        </div>
-                        <div class="col-md-6 mt-3">
-                            <label>Employee DOB</label>
-                            <input type="date" class="form-control" name="DOB" value="{{ $employee->DOB }}">
-                        </div>
-                        <div class="col-md-6 mt-3">
-                            <label>Phone</label>
-                            <input type="text" class="form-control" name="phone" value="{{ $employee->phone }}">
-                            @if ($errors->has('firstname'))
-                                <ul class="text-danger mt-2"><li>{{ $errors->first('phone') }}</li></ul>
+                                <ul class="text-danger mt-2"><li>{{ $errors->first('email') }}</li></ul>
                             @endif
                         </div>
                     </div>

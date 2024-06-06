@@ -3,14 +3,12 @@
 @section('content')
 
     <div class="container">
-
-        <h3 align="center" class="">Employee Management</h3>
-
+        <!--<h3 align="center" class="">Employee Management</h3> -->
         <div class="row">
             <div class="col-md-2">
             </div>
             <div class="col-md-8">
-            <!--@if ($errors->any())
+            <!-- @if ($errors->any())
             <div>
                 <ul class="alert alert-danger">
                     @foreach ($errors->all() as $error)
@@ -18,8 +16,8 @@
                     @endforeach
                 </ul>
             </div>
-            @endif -->
-            <div class="form-area mt-5">
+            @endif 
+           <div class="form-area mt-5">
                 <form method="POST" action="{{ route('employee.store') }}">
                     @csrf
                     <div class="row">
@@ -57,17 +55,73 @@
                         </div>
                     </div>
                 </form>
+            </div> -->
+            <h3 align="center" class="pt-5">Student List</h3>
+            <a href="{{ url('employee/create') }}" class="btn btn-info btn-sm mb-3 ml-2 pt-2 pb-2 pl-4 pr-4">Add</a>
+            <div class="row m-auto">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Student List</h3>
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead><tr>
+                    <th scope="col" class="pl-5">#</th>
+                        <th scope="col" class="pl-5">ID</th>
+                        <th scope="col" class="pl-5">Name</th>
+                        <th scope="col" class="pl-5">Email</th>
+                        
+                        <th scope="col" class="pl-5">Admin</th>
+                        <th scope="col" class="pl-5">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  @foreach($employers as $employee)
+                        <tr >
+                        <td class="pl-5">{{ $employee->id }}</td>
+                        <td class="pl-5">{{ $employee->id }}</td>
+                            <td class="pl-5">{{ $employee->name }}</td>
+                            <td class="pl-5">{{ $employee->email }}</td>
+                            <td class="pl-5">{{ $employee->DOB }}</td>
+                            <td>
+                            <a href="{{ url('employees/' . $employee->id . '/edit') }}" class="btn btn-success btn-sm">Edit</a>
+                            <a href="{{ url('employees/' . $employee->id . '/delete') }}" class="btn btn-danger btn-sm">Delete</a>
+                            </form>
+                            </td>
+
+                          </tr>
+
+                        @endforeach
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
             </div>
-            
-          <h3 align="center" class="mt-5">Employee List</h3>
-                <table class="table mt-5 border">
+            <!-- /.card -->
+        <!--<div class="container p-3">  
+          <h3 align="center" class="">Employee List</h3>
+                <table class="table mt-5">
                     <thead>
                       <tr>
                         <th scope="col" class="border border-dark">#</th>
-                        <th scope="col" class="border border-dark">Employee First Name</th>
-                        <th scope="col" class="border border-dark">Employee Last Name</th>
-                        <th scope="col" class="border border-dark">DOB</th>
-                        <th scope="col" class="border border-dark">Phone</th>
+                        <th scope="col" class="border border-dark">ID</th>
+                        <th scope="col" class="border border-dark">Name</th>
+                        <th scope="col" class="border border-dark">Email</th>
+                        <th scope="col" class="border border-dark">Admin</th>
                         <th scope="col" class="border border-dark">Action</th>
                       </tr>
                     </thead>
@@ -75,11 +129,11 @@
 
                     @foreach($employers as $employee)
                         <tr>
+                        <td class="border border-dark border-top">{{ $employee->id }}</td>
                         <td class="border border-dark">{{ $employee->id }}</td>
                             <td class="border border-dark">{{ $employee->firstname }}</td>
                             <td class="border border-dark">{{ $employee->lastname }}</td>
                             <td class="border border-dark">{{ $employee->DOB }}</td>
-                            <td class="border border-dark">{{ $employee->phone }}</td>
                             <td class="border border-dark">
                             <a href="{{ url('employees/' . $employee->id . '/edit') }}" class="btn btn-success btn-sm">Edit</a>
                             <a href="{{ url('employees/' . $employee->id . '/delete') }}" class="btn btn-danger btn-sm">Delete</a>
@@ -89,15 +143,15 @@
                           </tr>
 
                         @endforeach
-
-
-
-
                     </tbody>
                   </table>
-            </div>
+            </div> -->
+            
+        </div>  
+          </div>
         </div>
     </div>
+</div>
 
 @endsection
 
